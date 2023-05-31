@@ -21,7 +21,7 @@
 */
 
 #include "libft.h"
-
+//change
 char    *ft_strdup(const char *s)
 {
     int		i;
