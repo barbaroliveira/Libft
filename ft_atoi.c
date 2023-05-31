@@ -15,8 +15,8 @@
 int	ft_atoi(const char *str)
 {
 	size_t	i;
-	int	sinal;
-	int	resultado;
+	int		sinal;
+	int		resultado;
 
 	i = 0;
 	sinal = 1;

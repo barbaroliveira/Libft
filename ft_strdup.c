@@ -21,10 +21,10 @@
 */
 
 #include "libft.h"
-//change
-char    *ft_strdup(const char *s)
+
+char	*ft_strdup(const char *s)
 {
-    int		i;
+	int		i;
 	char	*dest;
 
 	dest = (char *) malloc(sizeof(char) * ft_strlen(s) + 1);
