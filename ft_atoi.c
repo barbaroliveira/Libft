@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bapereir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 15:25:00 by bapereir          #+#    #+#             */
-/*   Updated: 2023/04/17 15:25:18 by bapereir         ###   ########.fr       */
+/*   Created: 2023/05/29 20:36:33 by bapereir          #+#    #+#             */
+/*   Updated: 2023/05/29 20:36:50 by bapereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+int	ft_atoi(const char *str)
 {
 	size_t	i;
-	size_t	j;
-	size_t	result;
+	int	sinal;
+	int	resultado;
 
 	i = 0;
-	j = 0;
-	result = 0;
-	while (dest[i])
+	sinal = 1;
+	resultado = 0;
+	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (src[result])
-		result++;
-	if (size <= i)
-		result += size;
-	else
-		result += i;
-	while (src[j] && (i + 1) < size)
+	if ((str[i] == '+') || (str[i] == '-'))
 	{
-		dest[i] = src[j];
+		if (str[i] == '-')
+			sinal *= -1;
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (result);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		resultado = resultado * 10 + str[i++] - '0';
+	}
+	return (resultado * sinal);
 }

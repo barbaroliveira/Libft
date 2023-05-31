@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*helper;
 	size_t			i;
 
 	i = 0;
 	helper = (unsigned char *)s;
-	if (i < n)
+	while (i < n)
 	{
 		helper[i] = '\0';
 		i++;

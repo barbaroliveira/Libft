@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-char	*ft_strlowcase(char *str)
+int	ft_tolower(int c)
 {
 	int	i;
 
 	i = 0;
-	if (str[i] >= 65 && str[i] <= 90)
-		str[i] += 32;
-	return (str);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }
 /*adaptar testes*/
 

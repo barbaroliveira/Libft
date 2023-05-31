@@ -10,17 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-char	*ft_strupcase(int c)
+int	ft_toupper(int c)
 {
 	int	i;
 
 	i = 0;
-	if (str[i] >= 97 && str[i] <= 122)
-		str[i] -= 32;
-	return (str);
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }
 
 /*adaptar testes*/

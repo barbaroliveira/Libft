@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bapereir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 15:25:00 by bapereir          #+#    #+#             */
-/*   Updated: 2023/04/17 15:25:18 by bapereir         ###   ########.fr       */
+/*   Created: 2023/03/23 16:51:36 by bapereir          #+#    #+#             */
+/*   Updated: 2023/03/23 16:51:41 by bapereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	size_t	i;
-	size_t	j;
-	size_t	result;
 
 	i = 0;
-	j = 0;
-	result = 0;
-	while (dest[i])
-		i++;
-	while (src[result])
-		result++;
-	if (size <= i)
-		result += size;
-	else
-		result += i;
-	while (src[j] && (i + 1) < size)
+	if (!n)
+		return (0);
+	while ((s1[i] == s2[i]) && (s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		dest[i] = src[j];
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (result);
+	if (s1[i] != s2[i] && i < n)
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return (0);
 }
+/*int	main()
+{
+	char	s1[] = "aa aa b";
+	char	s2[] = "aa aa a";
+	
+	printf("%d", ft_strcmp(s1, s2));
+}*/
