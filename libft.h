@@ -12,15 +12,12 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-/*__________________________________[HEADERS]_________________________________*/
-
-# include <stdio.h>  /*__printf__*/
-# include <unistd.h> /*__write__*/
-# include <stdlib.h> /*__funcoes_originais__*/
-# include <string.h> /*__funcoes_originais__*/
-# include <ctype.h>  /*__funcoes_originais__*/
-# include <stddef.h> /*__funcoes_originais__*/
+# include <stdio.h>
+# include <unistd.h>/*__write__*/
+# include <stdlib.h>/*__funcoes_originais__*/
+# include <string.h>/*__funcoes_originais__*/
+# include <ctype.h>/*__funcoes_originais__*/
+# include <stddef.h>/*__funcoes_originais__*/
 
 /*_________________________________[FUNCTIONS]________________________________*/
 /*-----------------------------*Mandatory Part I*-----------------------------*/

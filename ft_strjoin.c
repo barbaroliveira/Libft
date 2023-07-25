@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	while (s1[i] != '\0')
-	{	
+	{
 		dest[i] = s1[i];
 		i++;
 	}
