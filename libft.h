@@ -49,6 +49,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 
 void    ft_putstr(char const *s);
+void    ft_putchar(char const);
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
